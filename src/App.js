@@ -22,30 +22,27 @@ class BooksApp extends Component {
   }
 
   onUpdateShelf = (book, shelf) => {
-    book.shelf = shelf;
-    this.setState(state => ({
-      books: state.books.filter(b => b.id !== book.id).concat([book])
-    }));
-    BooksAPI.update(book, shelf);
-  };
-
-  // onUpdateShelf = (book, shelf) => {
-  //   BooksAPI.update(book, shelf).then(() => {
-  //     console.log("updated");
-  //     this.getAllBooks();
-  //   });
-  // }
+    BooksAPI.update(book, shelf).then(() => {
+      console.log("shelf updated");
+      this.getAllBooks();
+    })
+  }
 
   render() {
     return (
       <div className="app">
-        <Route exact path="/" render={() => (
-          <Library
-            onUpdateShelf={this.onUpdateShelf}
-            books={this.state.books}
-          />
-        )} />
-        <Route exact path="/search"
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <Library
+              onUpdateShelf={this.onUpdateShelf}
+              books={this.state.books}
+            />
+          )} />
+        <Route
+          exact
+          path="/search"
           render={() => (
             <Search
               onUpdateShelf={this.onUpdateShelf}
