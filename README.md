@@ -5,7 +5,7 @@ This is the a project for Udacity's React Fundamentals course.
 ## Table of Contents
 
 * [Description](#description)
-* [How to install](#install)
+* [How to install](#how to install)
 
 ## Description
 
