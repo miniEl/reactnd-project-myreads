@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Book from './Book';
 
 class BookShelf extends Component {
-    updateShelf(book, shelf) {
-        this.props.changeShelf(book, shelf);
-    }
-
     render() {
         return (
             <div className="bookshelf">

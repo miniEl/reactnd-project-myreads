@@ -22,17 +22,14 @@ class Library extends Component {
                 <div className="list-books-content">
                     <div>
                         <BookShelf title="Currently Reading"
-                            books={this.props.books}
                             bookshelf={currentlyReading}
                             onUpdateShelf={this.props.onUpdateShelf}
                         />
                         <BookShelf title="Want To Read"
-                            books={this.props.books}
                             bookshelf={wantToRead}
                             onUpdateShelf={this.props.onUpdateShelf}
                         />
                         <BookShelf title="Read"
-                            books={this.props.books}
                             bookshelf={read}
                             onUpdateShelf={this.props.onUpdateShelf}
                         />
