@@ -1,6 +1,6 @@
 # MyReads Project
 
-This is the a project for Udacity's React Fundamentals course.
+This is a project for Udacity's React Fundamentals course.
 
 ## Table of Contents
 
